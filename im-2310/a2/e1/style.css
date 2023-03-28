@@ -1,0 +1,18 @@
+:root{
+    --col01: rgb(54,45,76);
+    --col02: rgb(228,91,62);
+    --col03: rgb(224,215,203);
+    --col04: rgb(145,141,151);
+    --col05: rgb(220,108,84);
+    --col06: rgb(249,164,149);
+}
+
+.page{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.panel{
+    background-color: var(--col04);
+}
