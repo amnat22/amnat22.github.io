@@ -9,34 +9,57 @@
 
 .page{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 200px);
+    grid-template-rows: repeat(7, 200px);
+    gap: 5px 5px;
+    grid-template-areas: 
+    "one . three . five"
+    "one two three four five"
+    ". two . four ."
+    "six six six six six"
+    "six six six six six"
+    "six six six six six"
+    "six six six six six";
 }
 
 .panel{
+    display: flex;
     background-color: var(--col04);
+    justify-content:center;
+    border-style: dashed;
+    border-color: white;
+    min-height: 50px;
+    min-width: 50px;
 }
 
 #p1{
-
+    grid-area: one;
+    background: radial-gradient(var(--col02) 0%, var(--col03)20%, var(--col04));
 }
 
 #p2{
-    
+    grid-area: two;
+    background: radial-gradient(var(--col02) 0%, var(--col03)35%, var(--col04)70%);
 }
 
 #p3{
-    
+    grid-area: three;
+    background: radial-gradient(var(--col02) 0%, var(--col03)35%, var(--col04)90%);
 }
 
 #p4{
-    
+    grid-area: four;
+    background: radial-gradient(var(--col02) 0%, var(--col06)20%, var(--col04)70%);
 }
 
 #p5{
-    
+    grid-area: five;
+    background: radial-gradient(var(--col02) 60%, var(--col03)70%, var(--col04)80%);
 }
 
 #p6{
-    background-color: var(--col03);
+    grid-area: six;
+    background: radial-gradient(var(--col02) 65%, var(--col01)66%, var(--col03)60%);
+    border-style: solid;
+    border-color: var(--col01);
 }
