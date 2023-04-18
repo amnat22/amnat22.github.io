@@ -127,17 +127,18 @@ li ul{
   these value are arbitrary, please change to create your own design  */
   width: 25%;
   height: 1rem;
-  background-color: var(--col-03);
   /* we also initially set display to none so it only shows once the link is clicked */
   display: none;
+  background-size: 200%;
+  background-image: linear-gradient(45deg, var(--col-03), transparent);
   animation: loadingBar 10000ms;
 
 }
 
 @keyframes loadingBar {
   0% {
-    background-size: 200%;
-    background-color: linear-gradient(45deg, var(--col-03), transparent);
+    
+    background-position: 0%;
   }
 
   100% {
