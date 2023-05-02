@@ -150,7 +150,7 @@ progressBar.addEventListener('mousedown', (e) => {
 });
 
 /* Mute/Unmute */
-function muteUnmute () {
+function muteUnmute() {
   if(videoElement.muted){
     //run if muted
     videoElement.muted = false;
@@ -164,10 +164,16 @@ function muteUnmute () {
 }
 muteButton.addEventListener("click", muteUnmute);
 
-function fullScreen () {
-  console.log("fullscreen click");
-
+/* Fullscreen */
+function fullScreen() {
+  console.log(videoElement.requestFullscreen());
+  /* if (!videoElement.fullscreenElement) {
+    videoElement.requestFullscreen();
+  /*} else {
+    videoElement.exitFullscreen();
+  }*/
 }
+
 fullScreenButton.addEventListener("click", fullScreen);
 
 
