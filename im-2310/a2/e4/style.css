@@ -82,8 +82,25 @@
   background-image: url('./icons/mute.svg');
 }
 
+/* FULLSCREEN - graphic animates on hover to demonstrate button function */
 #fullScreenButton{
   background-image: url('./icons/fullScreen.svg');
+  background-size: 75%;
+  background-repeat: no-repeat;
+}
+
+#fullScreenButton:hover{
+  animation: fsAnim 1s forwards;
+}
+
+@keyframes fsAnim {
+  0% {
+    background-size: 75%;
+  }
+  
+  100% {
+    background-size: 100%;
+  }
 }
 
 .video-progress-bar{

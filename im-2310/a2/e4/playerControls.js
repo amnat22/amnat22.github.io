@@ -164,14 +164,12 @@ function muteUnmute() {
 }
 muteButton.addEventListener("click", muteUnmute);
 
-/* Fullscreen */
+/* FULLSCREEN 
+    - I decided that the option to render the video in Fullscreen would be the implementation to increase accessibility
+      because the increase in size will lead to better legibility. A Fullscreen video also eliminates distractions by taking
+      over the entire view, allowing users to focus on the video itself.*/
 function fullScreen() {
   console.log(videoElement.requestFullscreen());
-  /* if (!videoElement.fullscreenElement) {
-    videoElement.requestFullscreen();
-  /*} else {
-    videoElement.exitFullscreen();
-  }*/
 }
 
 fullScreenButton.addEventListener("click", fullScreen);
