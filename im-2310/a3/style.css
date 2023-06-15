@@ -1,0 +1,89 @@
+
+:root{
+    /* colors from: ORSAGE PALETTE by Mahyellaw
+    https://lospec.com/palette-list/orsage */
+    --col-01:#daa066;
+    --col-02:#dbb982;
+    --col-03:#5e6342;
+    --col-04:#293121;
+}
+
+body{
+    background-color: var(--col-01);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: var(--col-04);
+}
+
+section{
+    /*I wanted the container to be as 'booklike' as possible, mimicking the standard dimensions of a paperback*/
+    width: 7in;
+    height: 10in;
+
+    margin:auto;
+    padding: 10px;
+    display: flex;
+
+    justify-content: center;
+    align-items: top;
+
+    text-align: justify;
+
+    border: 4px solid var(--col-03);
+    background-color: var(--col-02);
+
+    /*Disabled highlighting to prevent skimming text*/
+    user-select: none;
+}
+
+/*The first sentence needs to be visible in order to instruct on the interaction*/
+.first-sentence{
+    opacity: 1;
+    transition: opacity 8s ease;
+}
+
+.first-sentence:hover{
+    opacity: 0;
+}
+
+/*Following sentences appear on hover and fade over time once attention is no longer on them*/
+.sentence{
+    opacity: 0;
+    transition: opacity 4s ease;
+}
+
+.sentence:hover{
+    opacity: 1;
+}
+
+/*Different font face with identical interaction to above*/
+.plain-sentence{
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0;
+    transition: opacity 4s ease;
+}
+
+.plain-sentence:hover{
+    opacity: 1;
+}
+
+/*Same as above, but given font treatment common to accessibility settings*/
+.dyslexia-sentence{
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 0.1em;
+    opacity: 0;
+    transition: opacity 4s ease;
+}
+
+.dyslexia-sentence:hover{
+    opacity: 1;
+}
+
+/*End element fades slowly to punctuate the end of the piece*/
+.end{
+    opacity: 0;
+    transition: opacity 8s ease;
+}
+
+.end:hover{
+    opacity: 1;
+}
